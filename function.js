@@ -20,3 +20,4 @@ function calculeazaSalariu(salariu) {
 
 let deCalculat = calculeazaSalariu(5000);
 console.log(deCalculat);
+
