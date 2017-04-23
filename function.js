@@ -10,14 +10,56 @@ function multiply(unu, doi) {
 // console.log(multiply(5, 'ion'))
 
 function calculeazaSalariu(salariu) {
-  let impozit = 0.08 * salariu;
-  let asigurare = 0.09 * salariu;
-  let impozitTotal = impozit + asigurare;
-  let salariuNet = salariu - impozitTotal;
+  const impozit = 0.08 * salariu;
+  const asigurare = 0.09 * salariu;
+  const impozitTotal = impozit + asigurare;
+  const salariuNet = salariu - impozitTotal;
 
   return salariuNet;
 }
 
-let deCalculat = calculeazaSalariu(5000);
-console.log(deCalculat);
+const deCalculat = calculeazaSalariu(5000);
+// console.log(deCalculat)
+// "Masa5" -> "Masa"
+
+// ["M","a","s","a","5"]
+// function stringClean() {
+// const arr = 'Masa5'.split('');
+// const arrNou = [];
+
+// for (let i = 0; i < arr.length - 1; i += 1) {
+// console.log(i, arr[i])
+// arrNou.push(arr[i]);
+// }
+
+// console.log(arr);
+// var rime = arrNou.join("")
+//  console.log(rime)
+function stringClean(str) {
+  var arr = str.split("");
+  var cifre = "0123456789".split('');
+  var arrResultat = [];
+
+  for (let i = 0; i < arr.length; i = i + 1) {
+    if (cifre.indexOf(arr[i]) === -1) {
+      arrResultat.push(arr[i]);
+    }
+  }
+
+  return arrResultat.join("");
+}
+
+function stringClean2(str) {
+  return str.replace(/\d/g, '');
+}
+
+
+console.log(stringClean("Masa"));
+console.log(stringClean("Ion"));
+console.log(stringClean("I2o4n"));
+console.log(stringClean("6346"));
+
+
+
+
 
